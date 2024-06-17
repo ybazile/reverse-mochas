@@ -1,138 +1,160 @@
+/* Global reset for all elements */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Styling for the body of the webpage */
 body {
-  width: 100%;
-  background-color: #967969;
-  margin: 0;
-  padding: 0;
-  font-family: "Anton", sans-serif;
-  color: white;
+  width: 100%; /* Full width */
+  background-color: #967969; /* Background color */
+  margin: 0; /* No margin */
+  padding: 0; /* No padding */
+  font-family: "Anton", sans-serif; /* Font family */
+  color: white; /* Text color */
 }
+
+/* Styling for logo */
 .logo {
-  width: 9.375rem;
-  height: 6.25rem;
-  padding-left: 10px;
-  padding-right: 10px;
-  overflow: hidden;
-  display: inline-block;
+  width: 9.375rem; /* Fixed width */
+  height: auto; /* Maintain aspect ratio */
+  padding: 10px; /* Padding around the logo */
 }
 
+/* Styling for list items */
 li {
-  display: inline;
-  align-items: right;
-  font-family: "Anton", sans-serif;
+  display: inline; /* Display inline */
+  font-family: "Anton", sans-serif; /* Font family */
 }
 
+/* Styling for navigation bar */
 .navbar {
-  padding: 1.875rem;
-  display: flex;
+  padding: 1.875rem; /* Padding around navbar */
+  display: flex; /* Flex container */
+  align-items: center; /* Center align items vertically */
+  justify-content: space-between; /* Space between items */
 }
 
+/* Styling for anchor tags */
 a {
-  text-decoration: none;
-  color: white;
-  padding: 0.625rem;
-  text-align: center;
-  font-size: 40px;
+  text-decoration: none; /* Remove underline */
+  color: white; /* Text color */
+  padding: 0.625rem; /* Padding around text */
+  text-align: center; /* Center align text */
+  font-size: 1.5rem; /* Font size */
 }
 
+/* Hover effect for anchor tags */
 a:hover {
-  color: red;
+  color: red; /* Text color on hover */
 }
 
+/* Styling for side content */
 .side {
-  margin: 1px;
-  width: 700px;
-  height: 420px;
+  margin: 1px; /* Margin */
+  width: 100%; /* Full width */
+  max-width: 700px; /* Maximum width */
+  height: auto; /* Auto height */
 }
 
+/* Styling for purchase button */
 .purchase {
-  background-color: transparent;
-  border: 3px solid #e1cdb0;
-  box-sizing: border-box;
-  color: white;
-  font-family: "Avenir Next LT W01 Bold", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  padding: 16px 23px;
-  position: relative;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  background-color: transparent; /* Transparent background */
+  border: 3px solid #e1cdb0; /* Border */
+  color: white; /* Text color */
+  font-family: "Avenir Next LT W01 Bold", sans-serif; /* Font family */
+  font-size: 1rem; /* Font size */
+  font-weight: 700; /* Font weight */
+  line-height: 1.5rem; /* Line height */
+  padding: 1rem 1.5rem; /* Padding */
+  position: relative; /* Position relative */
+  text-decoration: none; /* Remove underline */
+  user-select: none; /* Disable text selection */
+  -webkit-user-select: none; /* Disable text selection for older browsers */
+  touch-action: manipulation; /* Specify how touch input events are handled */
 }
 
+/* Hover and active state for purchase button */
 .purchase:hover,
 .purchase:active {
-  outline: 0;
+  outline: 0; /* Remove outline */
 }
 
+/* Hover effect for purchase button */
 .purchase:hover {
-  background-color: transparent;
-  cursor: pointer;
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Pseudo-element styling for purchase button */
 .purchase:before {
-  background-color: #4b3f35;
-  content: "";
-  height: calc(100% + 3px);
-  position: absolute;
-  right: -7px;
-  top: -9px;
-  transition: background-color 300ms ease-in;
-  width: 100%;
-  z-index: -1;
+  background-color: #4b3f35; /* Background color */
+  content: ""; /* Empty content */
+  height: calc(100% + 3px); /* Height */
+  position: absolute; /* Position absolute */
+  right: -7px; /* Position from the right */
+  top: -9px; /* Position from the top */
+  transition: background-color 300ms ease-in; /* Transition effect */
+  width: 100%; /* Width */
+  z-index: -1; /* Stack order */
 }
 
+/* Hover effect for pseudo-element of purchase button */
 .purchase:hover:before {
-  background-color: red;
+  background-color: red; /* Background color on hover */
 }
 
-@media (min-width: 768px) {
-  .purchase {
-    padding: 16px 32px;
-  }
-}
-
+/* Styling for sections */
 .section {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  display: flex; /* Flex container */
+  flex-direction: column; /* Column layout */
+  align-items: center; /* Center align items vertically */
+  padding: 1rem; /* Padding */
 }
 
+/* Styling for info within sections */
 .info {
-  padding: 180px;
-  font-size: 35px;
-  position: relative;
-  bottom: 150px;
+  padding: 1rem; /* Padding */
+  font-size: 1.5rem; /* Font size */
+  text-align: center; /* Center align text */
 }
 
+/* Styling for images */
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Maximum width */
+  height: auto; /* Auto height */
 }
 
+/* Padding for paragraphs */
 p {
-  padding: 12px;
+  padding: 0.75rem; /* Padding */
 }
 
-@media (max-width: 800px) {
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: flex-start; /* Adjust navbar alignment */
+  }
+
   .section {
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
+    flex-direction: row; /* Row layout */
+    justify-content: space-around; /* Space around items */
   }
+
   .info {
-    font-size: 25px;
-    word-wrap: normal;
+    font-size: 1.75rem; /* Larger font size */
+    text-align: left; /* Left align text */
   }
-  .side {
-    margin: 11px;
-    width: 700px;
-    height: 420px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+  .info {
+    padding: 2rem; /* Increased padding */
+    font-size: 2rem; /* Larger font size */
+  }
+
+  .purchase {
+    padding: 1rem 2rem; /* Increased padding for purchase button */
   }
 }
