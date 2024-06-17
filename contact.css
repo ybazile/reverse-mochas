@@ -1,312 +1,366 @@
+/* Apply box-sizing border-box model to all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Basic styling for the body */
 body {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #967969;
-  font-family: "Anton", sans-serif;
-  color: white;
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Minimum height of viewport */
+  background-color: #967969; /* Background color */
+  font-family: "Anton", sans-serif; /* Font family */
+  color: white; /* Text color */
 }
 
+/* Styling for the logo */
 .logo {
-  width: 150px;
-  height: 100px;
-  padding-left: 10px;
-  padding-right: 10px;
-  overflow: hidden;
-  display: inline-block;
+  width: 150px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  padding-left: 10px; /* Left padding */
+  padding-right: 10px; /* Right padding */
+  overflow: hidden; /* Hide overflow content */
+  display: inline-block; /* Display as inline block */
 }
 
+/* Styling for list items */
 li {
-  display: inline;
-  align-items: right;
-  font-family: "Anton", sans-serif;
+  display: inline; /* Display as inline */
+  align-items: right; /* Align items to the right */
+  font-family: "Anton", sans-serif; /* Font family */
 }
 
+/* Styling for the navigation bar */
 .navbar {
-  padding: 20px;
-  display: block;
+  padding: 20px; /* Padding around navbar */
+  display: block; /* Display as block */
 }
 
+/* Styling for anchor tags within the navbar */
 .navbar a {
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 40px;
+  text-decoration: none; /* Remove underline */
+  color: white; /* Text color */
+  padding: 10px; /* Padding around links */
+  text-align: center; /* Center text */
+  font-size: 40px; /* Font size */
 }
+
+/* Styling for all anchor tags */
 a {
-  text-decoration: none;
-  color: white;
-  font-size: 23px;
+  text-decoration: none; /* Remove underline */
+  color: white; /* Text color */
+  font-size: 23px; /* Font size */
 }
+
+/* Hover effect for anchor tags */
 a:hover {
-  color: red;
+  color: red; /* Change text color on hover */
 }
 
+/* Main container styling */
 .container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 8%;
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Minimum height of viewport */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 30px 8%; /* Padding around container */
 }
 
+/* Row styling within the container */
 .container .row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1100px;
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space items evenly */
+  width: 100%; /* Full width */
+  max-width: 1100px; /* Maximum width */
 }
 
+/* Column styling within rows */
 .row section.col {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Arrange items vertically */
 }
 
+/* Left section styling */
 .row section.left {
-  flex-basis: 35%;
-  min-width: 320px;
-  margin-right: 60px;
+  flex-basis: 35%; /* Basis width */
+  min-width: 320px; /* Minimum width */
+  margin-right: 60px; /* Margin on the right */
 }
 
+/* Right section styling */
 .row section.right {
-  flex-basis: 60%;
+  flex-basis: 60%; /* Basis width */
 }
 
+/* Contact title styling */
 section.left .contactTitle h2 {
-  position: relative;
-  font-size: 28px;
-  display: inline-block;
-  margin-bottom: 25px;
+  position: relative; /* Positioning relative to its normal position */
+  font-size: 28px; /* Font size */
+  display: inline-block; /* Display as inline block */
+  margin-bottom: 25px; /* Margin at the bottom */
 }
 
+/* Styling for pseudo-element before h2 */
 section.left .contactTitle h2::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 1px;
-  top: 120%;
-  left: 0;
+  content: ""; /* Empty content */
+  position: absolute; /* Positioning absolute */
+  width: 50%; /* Width */
+  height: 1px; /* Height */
+  top: 120%; /* Position from the top */
+  left: 0; /* Position from the left */
 }
 
+/* Paragraph styling within contact title */
 section.left .contactTitle p {
-  font-size: 17px;
-  letter-spacing: 1px;
-  line-height: 1.2;
-  padding-bottom: 22px;
+  font-size: 17px; /* Font size */
+  letter-spacing: 1px; /* Letter spacing */
+  line-height: 1.2; /* Line height */
+  padding-bottom: 22px; /* Padding at the bottom */
 }
 
+/* Contact information styling */
 section.left .contactInfo {
-  margin-bottom: 16px;
+  margin-bottom: 16px; /* Margin at the bottom */
 }
 
+/* Icon group styling within contact information */
 .contactInfo .iconGroup {
-  display: flex;
-  align-items: center;
-  margin: 25px 0px;
+  display: flex; /* Flex layout */
+  align-items: center; /* Align items vertically */
+  margin: 25px 0px; /* Margin */
 }
 
+/* Styling for icons within icon groups */
 .iconGroup .icon {
-  width: 45px;
-  height: 45px;
-  border: 2px solid #4b3f35;
-  border-radius: 50%;
-  margin-right: 20px;
-  position: relative;
+  width: 45px; /* Width */
+  height: 45px; /* Height */
+  border: 2px solid #4b3f35; /* Border */
+  border-radius: 50%; /* Border radius */
+  margin-right: 20px; /* Margin on the right */
+  position: relative; /* Positioning relative */
 }
 
+/* Styling for icon element within icon group */
 .iconGroup .icon i {
-  font-size: 20px;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 20px; /* Font size */
+  color: white; /* Text color */
+  position: absolute; /* Positioning absolute */
+  top: 50%; /* Position from the top */
+  left: 50%; /* Position from the left */
+  transform: translate(-50%, -50%); /* Centering */
 }
 
+/* Hover effect for icons within icon groups */
 .iconGroup .icon i:hover {
-  color: red;
+  color: red; /* Change text color on hover */
 }
 
+/* Styling for details within icon group */
 .iconGroup .details span {
-  display: block;
-  color: white;
-  font-size: 20px;
+  display: block; /* Display as block */
+  color: white; /* Text color */
+  font-size: 20px; /* Font size */
 }
 
+/* Styling for the first child span within details */
 .iconGroup .details span:nth-child(1) {
-  text-transform: uppercase;
-  color: #4b3f35;
+  text-transform: uppercase; /* Uppercase text */
+  color: #4b3f35; /* Text color */
 }
-/* start of social media CSS */
+
+/* Styling for social media section */
 section.left .social {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 22px 0px 20px;
+  display: flex; /* Flex layout */
+  justify-content: flex-start; /* Justify items to the start */
+  align-items: center; /* Align items vertically */
+  flex-wrap: wrap; /* Wrap items */
+  margin: 22px 0px 20px; /* Margin */
 }
 
+/* Styling for anchor tags within social media section */
 .social a {
-  width: 35px;
-  height: 35px;
-  text-decoration: none;
-  text-align: center;
-  margin-right: 15px;
-  border-radius: 5px;
-  background-color: #4b3f35;
-  transition: 0.4s;
+  width: 35px; /* Width */
+  height: 35px; /* Height */
+  text-decoration: none; /* Remove underline */
+  text-align: center; /* Center text */
+  margin-right: 15px; /* Margin on the right */
+  border-radius: 5px; /* Border radius */
+  background-color: #4b3f35; /* Background color */
+  transition: 0.4s; /* Transition effect */
 }
 
+/* Styling for icons within anchor tags */
 .social a i {
-  color: white;
-  font-size: 18px;
-  line-height: 35px;
-  border: 1px solid transparent;
-  transition: 0.4s;
+  color: white; /* Text color */
+  font-size: 18px; /* Font size */
+  line-height: 35px; /* Line height */
+  border: 1px solid transparent; /* Border */
+  transition: 0.4s; /* Transition effect */
 }
 
+/* Hover effect for anchor tags */
 .social a:hover {
-  transform: translate(-5px);
-  background-color: #4b3f35;
-  color: red;
-  border: 1px solid red;
+  transform: translate(-5px); /* Move on hover */
+  background-color: #4b3f35; /* Background color */
+  color: red; /* Text color */
+  border: 1px solid red; /* Border */
 }
+
+/* Hover effect for icons within anchor tags */
 .social a i:hover {
-  color: red;
+  color: red; /* Change text color on hover */
 }
-/* End of social media CSS */
+
+/* Styling for message section within right column */
 .row section.right .message {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 30px;
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space items evenly */
+  flex-wrap: wrap; /* Wrap items */
+  padding-top: 30px; /* Padding at the top */
 }
 
+/* Styling for input groups within message section */
 .row section.right .inputGroup {
-  margin: 18px 0px;
-  position: relative;
+  margin: 18px 0px; /* Margin */
+  position: relative; /* Positioning relative */
 }
 
+/* Styling for half-width message inputs */
 .message .halfWidth {
-  flex-basis: 48%;
+  flex-basis: 48%; /* Basis width */
 }
+
+/* Styling for full-width message inputs */
 .message .fullWidth {
-  flex-basis: 100%;
+  flex-basis: 100%; /* Full width */
 }
+
+/* Styling for input and textarea within message */
 .message input,
 .message textarea {
-  width: 100%;
-  font-size: 25px;
-  padding: 2px 0px;
-  background-color: #967969;
-  color: #4b3f35;
-  border: none;
-  border-bottom: 2px solid #e1cdb0;
-  outline: none;
-  font-weight: bold;
+  width: 100%; /* Full width */
+  font-size: 25px; /* Font size */
+  padding: 2px 0px; /* Padding */
+  background-color: #967969; /* Background color */
+  color: #4b3f35; /* Text color */
+  border: none; /* No border */
+  border-bottom: 2px solid #e1cdb0; /* Bottom border */
+  outline: none; /* No outline */
+  font-weight: bold; /* Font weight */
 }
 
+/* Styling for textarea within message */
 .message textarea {
-  resize: none;
-  height: 220px;
-  display: block;
+  resize: none; /* Disable resize */
+  height: 220px; /* Height */
+  display: block; /* Display as block */
 }
 
+/* Styling for scrollbar track within textarea */
 textarea::-webkit-scrollbar-track {
-  background-color: #e1cdb0;
-  border-radius: 15px;
+  background-color: #e1cdb0; /* Background color */
+  border-radius: 15px; /* Border radius */
 }
 
+/* Styling for labels within input groups */
 .inputGroup label {
-  position: absolute;
-  left: 0;
-  bottom: 4px;
-  color: white;
-  font-size: 18px;
-  transition: 0.4s;
-  pointer-events: none;
-}
-.inputGroup:nth-child(4) label {
-  top: 2px;
+  position: absolute; /* Positioning absolute */
+  left: 0; /* Position from the left */
+  bottom: 4px; /* Position from the bottom */
+  color: white; /* Text color */
+  font-size: 18px; /* Font size */
+  transition: 0.4s; /* Transition effect */
+  pointer-events: none; /* No pointer events */
 }
 
+/* Styling for label within fourth child of input */
+
+/* Adjust label position for the fourth child of inputGroup */
+.inputGroup:nth-child(4) label {
+  top: 2px; /* Position from the top */
+}
+
+/* Styling for labels when input or textarea is focused or has valid content */
 .inputGroup input:focus ~ label,
 .inputGroup textarea:focus ~ label,
 .inputGroup input:valid ~ label,
 .inputGroup textarea:valid ~ label {
-  transform: translateY(-30px);
-  font-size: 16px;
+  transform: translateY(-30px); /* Move label up */
+  font-size: 16px; /* Font size */
 }
 
+/* Styling for button within inputGroup */
 .inputGroup button {
-  background-color: transparent;
-  border: 3px solid #e1cdb0;
-  box-sizing: border-box;
-  color: white;
-  font-family: "Avenir Next LT W01 Bold", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  padding: 16px 23px;
-  position: relative;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  background-color: transparent; /* Transparent background */
+  border: 3px solid #e1cdb0; /* Border */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  color: white; /* Text color */
+  font-family: "Avenir Next LT W01 Bold", sans-serif; /* Font family */
+  font-size: 16px; /* Font size */
+  font-weight: 700; /* Font weight */
+  line-height: 24px; /* Line height */
+  padding: 16px 23px; /* Padding */
+  position: relative; /* Positioning relative */
+  text-decoration: none; /* Remove underline */
+  user-select: none; /* Disable text selection */
+  -webkit-user-select: none; /* Disable text selection for older browsers */
+  touch-action: manipulation; /* Specify how touch input events are handled */
 }
 
+/* Styling for button and active state of inputGroup */
 .inputGroup button,
 .inputGroup:active {
-  outline: 0;
+  outline: 0; /* Remove outline */
 }
 
+/* Hover effect for button within inputGroup */
 .inputGroup button:hover {
-  background-color: transparent;
-  cursor: pointer;
+  background-color: transparent; /* Transparent background on hover */
+  cursor: pointer; /* Cursor pointer */
 }
 
+/* Pseudo-element styling for button */
 .inputGroup button:before {
-  background-color: #4b3f35;
-  content: "";
-  height: calc(100% + 3px);
-  position: absolute;
-  right: -7px;
-  top: -9px;
-  transition: background-color 300ms ease-in;
-  width: 100%;
-  z-index: -1;
+  background-color: #4b3f35; /* Background color */
+  content: ""; /* Empty content */
+  height: calc(100% + 3px); /* Height */
+  position: absolute; /* Positioning absolute */
+  right: -7px; /* Position from the right */
+  top: -9px; /* Position from the top */
+  transition: background-color 300ms ease-in; /* Transition effect */
+  width: 100%; /* Width */
+  z-index: -1; /* Stack order */
 }
 
+/* Hover effect for pseudo-element */
 .inputGroup button:hover:before {
-  background-color: red;
+  background-color: red; /* Background color on hover */
 }
 
+/* Media query for smaller screens */
 @media (max-width: 1100px) {
   .message .halfWidth {
-    flex-basis: 100%;
+    flex-basis: 100%; /* Full width for halfWidth class in message */
   }
 }
 
+/* Media query for even smaller screens */
 @media (max-width: 900px) {
   .container .row {
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Wrap rows */
   }
   .row section.left,
   .row section.right {
-    flex-basis: 100%;
-    margin: 0px;
+    flex-basis: 100%; /* Full width for left and right sections */
+    margin: 0px; /* No margin */
   }
 }
 
+/* Media query for tablets and larger screens */
 @media (min-width: 768px) {
   .inputGroup button {
-    padding: 16px 32px;
+    padding: 16px 32px; /* Larger padding for button */
   }
 }
