@@ -1,32 +1,95 @@
+/* Apply box-sizing border-box model to all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.bio {
-  font-family: "Anton", sans-serif;
-  color: white;
-  font-size: 30px;
-  float: right;
-  padding: 18px;
-  width: auto;
-  padding-top: 100px;
+/* Basic styling for the body */
+body {
+  width: 100%; /* Full width */
+  background-color: #967969; /* Background color */
+  margin: 0;
+  padding: 0;
+  font-family: "Anton", sans-serif; /* Font family */
+  color: white; /* Text color */
 }
 
+/* Styling for the logo */
+.logo {
+  width: 9.375rem; /* Fixed width for the logo */
+  height: auto; /* Maintain aspect ratio */
+  padding: 10px; /* Padding around the logo */
+}
+
+/* Styling for list items */
+li {
+  display: inline; /* Display as inline */
+  font-family: "Anton", sans-serif; /* Font family */
+}
+
+/* Styling for the navigation bar */
+.navbar {
+  padding: 1.875rem; /* Padding around navbar */
+  display: flex; /* Flex layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between items */
+}
+
+/* Styling for anchor tags */
+a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Text color */
+  padding: 0.625rem; /* Padding around links */
+  text-align: center; /* Center text */
+  font-size: 1.5rem; /* Font size */
+}
+
+/* Hover effect for anchor tags */
+a:hover {
+  color: red; /* Change text color on hover */
+}
+
+/* General content padding */
+.content {
+  padding: 1rem; /* Padding around content */
+}
+
+/* Styling for a floating element */
 .trav {
-  display: flex;
-  justify-content: space-between;
+  float: left; /* Float left */
+  max-width: 40%; /* Maximum width */
+  margin: 1rem; /* Margin around the element */
 }
 
-@media (max-width: 800px) {
-  .bio {
-    text-align: center;
-    flex-direction: column;
+/* Styling for biography section */
+.bio {
+  font-size: 1.5rem; /* Font size */
+  padding: 1rem; /* Padding around biography */
+}
+
+/* Responsive styles using media queries */
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: flex-start; /* Align items to the start */
   }
 
   .trav {
-    flex-direction: column;
-    width: 100%;
+    max-width: 30%; /* Adjust maximum width */
+  }
+
+  .bio {
+    font-size: 1.75rem; /* Increase font size */
+    padding: 1.5rem; /* Increase padding */
+  }
+}
+
+/* For screens larger than 1024px */
+@media (min-width: 1024px) {
+  .bio {
+    font-size: 2rem; /* Further increase font size */
+    padding: 2rem; /* Further increase padding */
   }
 }
