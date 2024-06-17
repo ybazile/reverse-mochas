@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bio {
+  font-family: "Anton", sans-serif;
+  color: white;
+  font-size: 30px;
+  float: right;
+  padding: 18px;
+  width: auto;
+  padding-top: 100px;
+}
+
+.trav {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .bio {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .trav {
+    flex-direction: column;
+    width: 100%;
+  }
+}

@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #967969;
+  margin: 0;
+  padding: 0;
+  font-family: "Anton", sans-serif;
+  color: white;
+}
+.logo {
+  width: 9.375rem;
+  height: 6.25rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+li {
+  display: inline;
+  align-items: right;
+  font-family: "Anton", sans-serif;
+}
+
+.navbar {
+  padding: 1.875rem;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 0.625rem;
+  text-align: center;
+  font-size: 40px;
+}
+
+a:hover {
+  color: red;
+}
+
+.side {
+  margin: 1px;
+  width: 700px;
+  height: 420px;
+}
+
+.purchase {
+  background-color: transparent;
+  border: 3px solid #e1cdb0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.purchase:hover,
+.purchase:active {
+  outline: 0;
+}
+
+.purchase:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.purchase:before {
+  background-color: #4b3f35;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.purchase:hover:before {
+  background-color: red;
+}
+
+@media (min-width: 768px) {
+  .purchase {
+    padding: 16px 32px;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.info {
+  padding: 180px;
+  font-size: 35px;
+  position: relative;
+  bottom: 150px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  padding: 12px;
+}
+
+@media (max-width: 800px) {
+  .section {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .info {
+    font-size: 25px;
+    word-wrap: normal;
+  }
+  .side {
+    margin: 11px;
+    width: 700px;
+    height: 420px;
+  }
+}
